@@ -414,7 +414,7 @@
 		padding: 12px 16px;
 		background-color: var(--palette-bg);
 		border-radius: 12px;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+		box-shadow: var(--shadow-lg);
 		backdrop-filter: blur(10px);
 		z-index: 100;
 		border: 1px solid var(--palette-border);
@@ -424,8 +424,8 @@
 		width: 48px;
 		height: 48px;
 		border-radius: 50%;
-		border: 3px solid rgba(0, 0, 0, 0.2);
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		border: 3px solid var(--border-alpha);
+		box-shadow: var(--shadow-md);
 		flex-shrink: 0;
 	}
 
@@ -444,7 +444,7 @@
 		height: 36px;
 		border-radius: 8px;
 		cursor: pointer;
-		border: 2px solid rgba(0, 0, 0, 0.1);
+		border: 2px solid var(--border-alpha);
 		transition: all 0.2s ease;
 		/* Remove default button styling */
 		background: none;
@@ -456,7 +456,7 @@
 	.color:hover {
 		transform: scale(1.1);
 		border-color: var(--text-primary);
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+		box-shadow: var(--shadow-md);
 	}
 	
 	.color:focus {
@@ -468,7 +468,7 @@
 		border-color: var(--text-primary);
 		border-width: 3px;
 		transform: scale(1.05);
-		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+		box-shadow: var(--shadow-md);
 	}
 
 	.color[data-color="red"] { background-color: #ff0000 !important; }
@@ -482,7 +482,7 @@
 		height: 36px;
 		border-radius: 8px;
 		cursor: pointer;
-		border: 2px solid rgba(0, 0, 0, 0.1);
+		border: 2px solid var(--border-alpha);
 		background-color: var(--tool-btn-bg);
 		transition: all 0.2s ease;
 		font-size: 16px;
@@ -498,7 +498,7 @@
 	.tool-btn:hover {
 		transform: scale(1.1);
 		border-color: var(--text-primary);
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+		box-shadow: var(--shadow-md);
 		background-color: var(--tool-btn-bg-hover);
 	}
 
@@ -510,7 +510,7 @@
 	.tool-btn.active {
 		border-color: var(--primary-color);
 		border-width: 3px;
-		background-color: rgba(59, 130, 246, 0.1);
+		background-color: var(--primary-alpha);
 		transform: scale(1.05);
 	}
 
@@ -526,7 +526,7 @@
 		background-color: var(--bg-primary);
 		border-radius: 12px;
 		padding: 0;
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+		box-shadow: var(--shadow-xl);
 		border: 1px solid var(--border-color);
 		position: relative;
 		overflow: hidden;
@@ -577,7 +577,7 @@
 		top: 0;
 		left: 0;
 		background-color: var(--canvas-bg);
-		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+		box-shadow: var(--shadow-md);
 		transform-origin: top left;
 		/* Ensure crisp pixel rendering */
 		image-rendering: pixelated;

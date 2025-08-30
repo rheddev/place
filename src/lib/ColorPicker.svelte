@@ -328,7 +328,7 @@
 	canvas {
 		border-radius: 50%;
 		cursor: crosshair;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+		box-shadow: var(--shadow-md);
 	}
 	
 	.controls {
@@ -367,7 +367,7 @@
 		width: 36px;
 		text-align: right;
 		font-size: 12px;
-		color: #666;
+		color: var(--text-secondary);
 		flex-shrink: 0;
 		font-family: 'Courier New', monospace;
 	}
@@ -386,20 +386,20 @@
 		width: 16px;
 		height: 16px;
 		border-radius: 50%;
-		background: #333;
+		background: var(--text-primary);
 		cursor: pointer;
-		border: 2px solid #fff;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+		border: 2px solid var(--bg-primary);
+		box-shadow: var(--shadow);
 	}
 	
 	input[type="range"]::-moz-range-thumb {
 		width: 16px;
 		height: 16px;
 		border-radius: 50%;
-		background: #333;
+		background: var(--text-primary);
 		cursor: pointer;
-		border: 2px solid #fff;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+		border: 2px solid var(--bg-primary);
+		box-shadow: var(--shadow);
 	}
 	
 	.brightness-slider {
@@ -430,7 +430,7 @@
 	}
 	
 	.hex-display {
-		border-top: 1px solid #eee;
+		border-top: 1px solid var(--border-color);
 		padding-top: 12px;
 		margin-top: 4px;
 	}
@@ -438,11 +438,12 @@
 	.hex-input {
 		flex: 1;
 		padding: 6px 8px;
-		border: 1px solid #ddd;
+		border: 1px solid var(--border-color);
 		border-radius: 4px;
 		font-family: 'Courier New', monospace;
 		font-size: 12px;
-		background-color: #f9f9f9;
+		background-color: var(--bg-secondary);
+		color: var(--text-primary);
 		text-align: center;
 		min-width: 0;
 	}

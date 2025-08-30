@@ -15,6 +15,7 @@ html {
 /* CSS Variables for consistent theming */
 :root {
 	--primary-color: #3b82f6;
+	--primary-color-hover: #2563eb;
 	--secondary-color: #64748b;
 	--success-color: #10b981;
 	--warning-color: #f59e0b;
@@ -28,6 +29,11 @@ html {
 	--border-color: #e2e8f0;
 	--border-radius: 8px;
 	--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+	--shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.15);
+	--shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+	--shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.2);
+	--border-alpha: rgba(0, 0, 0, 0.1);
+	--primary-alpha: rgba(59, 130, 246, 0.1);
 	
 	/* Drawing app specific colors */
 	--canvas-bg: #ffffff;
@@ -36,13 +42,14 @@ html {
 	--tool-btn-bg: rgba(240, 240, 240, 0.9);
 	--tool-btn-bg-hover: rgba(220, 220, 220, 0.9);
 	--instructions-bg: rgba(255, 255, 255, 0.95);
-	--instructions-text: white;
+	--instructions-text: #1e293b;
 	--app-bg: #f1f5f9;
 }
 
 /* Dark mode variables */
 @media (prefers-color-scheme: dark) {
 	:root {
+		--primary-color-hover: #1e40af;
 		--bg-primary: #1e293b;
 		--bg-secondary: #0f172a;
 		--text-primary: #f1f5f9;
@@ -50,6 +57,11 @@ html {
 		
 		--border-color: #334155;
 		--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+		--shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.4);
+		--shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
+		--shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.5);
+		--border-alpha: rgba(255, 255, 255, 0.1);
+		--primary-alpha: rgba(59, 130, 246, 0.2);
 		
 		/* Drawing app dark mode colors */
 		--canvas-bg: #ffffff;
@@ -65,6 +77,7 @@ html {
 
 /* Explicit dark class support (overrides media query) */
 html.dark {
+	--primary-color-hover: #1e40af;
 	--bg-primary: #1e293b;
 	--bg-secondary: #0f172a;
 	--text-primary: #f1f5f9;
@@ -72,6 +85,11 @@ html.dark {
 	
 	--border-color: #334155;
 	--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+	--shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.4);
+	--shadow-md: 0 2px 8px rgba(0, 0, 0, 0.3);
+	--shadow-xl: 0 8px 32px rgba(0, 0, 0, 0.5);
+	--border-alpha: rgba(255, 255, 255, 0.1);
+	--primary-alpha: rgba(59, 130, 246, 0.2);
 	
 	/* Drawing app dark mode colors */
 	--canvas-bg: #ffffff;
@@ -113,7 +131,7 @@ p {
 }
 
 .btn:hover {
-	background-color: #2563eb;
+	background-color: var(--primary-color-hover);
 }
 
 .card {
