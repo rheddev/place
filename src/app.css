@@ -28,6 +28,60 @@ html {
 	--border-color: #e2e8f0;
 	--border-radius: 8px;
 	--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+	
+	/* Drawing app specific colors */
+	--canvas-bg: #ffffff;
+	--palette-bg: rgba(255, 255, 255, 0.95);
+	--palette-border: rgba(255, 255, 255, 0.2);
+	--tool-btn-bg: rgba(240, 240, 240, 0.9);
+	--tool-btn-bg-hover: rgba(220, 220, 220, 0.9);
+	--instructions-bg: rgba(255, 255, 255, 0.95);
+	--instructions-text: white;
+	--app-bg: #f1f5f9;
+}
+
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-primary: #1e293b;
+		--bg-secondary: #0f172a;
+		--text-primary: #f1f5f9;
+		--text-secondary: #94a3b8;
+		
+		--border-color: #334155;
+		--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+		
+		/* Drawing app dark mode colors */
+		--canvas-bg: #ffffff;
+		--palette-bg: rgba(30, 41, 59, 0.95);
+		--palette-border: rgba(51, 65, 85, 0.3);
+		--tool-btn-bg: rgba(51, 65, 85, 0.9);
+		--tool-btn-bg-hover: rgba(71, 85, 105, 0.9);
+		--instructions-bg: rgba(15, 23, 42, 0.9);
+		--instructions-text: #f1f5f9;
+		--app-bg: #2a2a2a;
+	}
+}
+
+/* Explicit dark class support (overrides media query) */
+html.dark {
+	--bg-primary: #1e293b;
+	--bg-secondary: #0f172a;
+	--text-primary: #f1f5f9;
+	--text-secondary: #94a3b8;
+	
+	--border-color: #334155;
+	--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+	
+	/* Drawing app dark mode colors */
+	--canvas-bg: #ffffff;
+	--palette-bg: rgba(30, 41, 59, 0.95);
+	--palette-border: rgba(51, 65, 85, 0.3);
+	--tool-btn-bg: rgba(51, 65, 85, 0.9);
+	--tool-btn-bg-hover: rgba(71, 85, 105, 0.9);
+	--instructions-bg: rgba(15, 23, 42, 0.9);
+	--instructions-text: #f1f5f9;
+	--app-bg: #2a2a2a;
 }
 
 /* Typography */
