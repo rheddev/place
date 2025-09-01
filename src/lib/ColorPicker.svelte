@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { createEventDispatcher, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 	import { Sun } from '@lucide/svelte';
 	
 	export let selectedColor = '#000000';
-	
-	const dispatch = createEventDispatcher();
+	export let onColorChange: ((color: string) => void) | undefined = undefined;
 	
 	let canvas: HTMLCanvasElement;
 	let ctx: CanvasRenderingContext2D;
@@ -200,7 +199,7 @@
 	
 	function updateColor() {
 		selectedColor = rgbToHex(r, g, b);
-		dispatch('colorChange', selectedColor);
+		onColorChange?.(selectedColor);
 	}
 	
 	function onRChange() {

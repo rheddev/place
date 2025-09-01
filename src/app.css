@@ -37,6 +37,8 @@ html {
 	
 	/* Drawing app specific colors */
 	--canvas-bg: #ffffff;
+	--canvas-width: 128;
+	--canvas-height: 72;
 	--palette-bg: rgba(255, 255, 255, 0.95);
 	--palette-border: rgba(255, 255, 255, 0.2);
 	--tool-btn-bg: rgba(240, 240, 240, 0.9);

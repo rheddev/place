@@ -2,8 +2,8 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import '../app.css';
 	import { onMount } from 'svelte';
-
-	let { children } = $props();
+	
+	let { children }: { children: any } = $props();
 	
 	onMount(() => {
 		// Apply initial theme based on system preference
@@ -29,7 +29,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children?.()}
+{@render children()}
 
 <style>
 	/* Global layout styles that respect CSS variables */
